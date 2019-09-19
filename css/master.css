@@ -1,0 +1,59 @@
+/* all elements rules */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* multiple elements rules */
+ul {
+  list-style-type: none;
+}
+
+body {
+  width: 1280px;
+  margin: auto;
+}
+
+/* header */
+header {
+  background-color: blue;
+  /* used to avoid margins collapse between header and its children */
+  overflow: hidden;
+}
+
+.container-margin-left-right {
+  width: 80%;
+  margin: 15px auto 0;
+  background-color: pink; /* debug */
+}
+
+  /* clearfix */
+.container-margin-left-right:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header .sx-col {
+  float: left;
+  width: 20%;
+  background-color: green; /* debug */
+}
+
+header .center-col {
+  float: left;
+  width: 50%;
+  background-color: red; /* debug */
+}
+
+header li {
+  display: inline-block;
+}
+
+header .right-col {
+  float: right;
+  width: 30%;
+  background-color: yellow; /* debug */
+}
