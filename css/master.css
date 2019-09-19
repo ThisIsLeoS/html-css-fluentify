@@ -6,31 +6,36 @@
   box-sizing: border-box;
 }
 
-/* multiple elements rules */
-ul {
-  list-style-type: none;
+/* rules used in different parts of the page */
+li a {
+  text-decoration: none;
 }
 
+/* body */
 body {
   width: 1280px;
   margin: auto;
+  font-family: Arial, sans-serif;
 }
 
 /* header */
 header {
-  background-color: blue;
+  background-color: rgb(13, 50, 90);
   /* used to avoid margins collapse between header and its children */
   overflow: hidden;
 }
 
-.container-margin-left-right {
-  width: 80%;
+/* header first row */
+.header-first-row {
+  width: 90%;
   margin: 15px auto 0;
-  background-color: pink; /* debug */
+  /* background-color: pink; */ /* debug */
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
   /* clearfix */
-.container-margin-left-right:after {
+.header-first-row:after {
   content: "";
   display: table;
   clear: both;
@@ -38,22 +43,61 @@ header {
 
 header .sx-col {
   float: left;
-  width: 20%;
-  background-color: green; /* debug */
+  width: 15%;
+  /* background-color: green; */ /* debug */
+}
+
+.logo-img {
+  /* to avoid space under the logo image */
+  display: block;
 }
 
 header .center-col {
   float: left;
   width: 50%;
-  background-color: red; /* debug */
+  /* background-color: red; */ /* debug */
+}
+
+header ul {
+  list-style-type: none;
 }
 
 header li {
   display: inline-block;
+  /* centering the list items horizontally in the .center-col box (38px is the height of the tallest element in the first row of the header: the logo image) */
+  line-height: 38px;
+}
+
+header li a {
+  margin: 0 5px;
+  color: white;
 }
 
 header .right-col {
-  float: right;
-  width: 30%;
-  background-color: yellow; /* debug */
+  float: left;
+  width: 35%;
+  /* background-color: black; */ /* debug */
 }
+
+header .right-col ul {
+  float: right;
+}
+
+#tutor-link {
+  opacity: 0.6;
+}
+
+#login-link, #plan-link {
+    border-radius: 5px;
+}
+
+#login-link {
+  padding: 5px 25px;
+  border: 1px solid rgb(71, 131, 173);
+}
+
+#plan-link {
+  padding: 5px 10px;
+  background-color: green;
+}
+/* /header first row */
