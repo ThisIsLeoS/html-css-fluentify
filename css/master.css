@@ -6,14 +6,9 @@
   box-sizing: border-box;
 }
 
-/* rules used in different parts of the page */
-li a {
-  text-decoration: none;
-}
-
 /* body */
 body {
-  width: 1280px;
+  width: 1200px;
   margin: auto;
   font-family: Arial, sans-serif;
 }
@@ -21,83 +16,139 @@ body {
 /* header */
 header {
   background-color: rgb(13, 50, 90);
+  font-weight: bold;
+  color: white;
   /* used to avoid margins collapse between header and its children */
   overflow: hidden;
 }
 
-/* header first row */
-.header-first-row {
-  width: 90%;
-  margin: 15px auto 0;
-  /* background-color: pink; */ /* debug */
-  font-size: 11px;
-  text-transform: uppercase;
-}
+  header a {
+    /* to overwrite browser's style */
+    text-decoration: none;
+    color: white;
+  }
 
-  /* clearfix */
-.header-first-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  /* header first row */
+  #header-first-row {
+    width: 86%;
+    margin: 15px auto 0;
+    /* background-color: pink; */ /* debug */
+    font-size: 11px;
+    text-transform: uppercase;
+  }
 
-header .sx-col {
-  float: left;
-  width: 15%;
-  /* background-color: green; */ /* debug */
-}
+      /* clearfix */
+  #header-first-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-.logo-img {
-  /* to avoid space under the logo image */
-  display: block;
-}
+  header .sx-col {
+    float: left;
+    width: 15%;
+    /* background-color: green; */ /* debug */
+  }
 
-header .center-col {
-  float: left;
-  width: 50%;
-  /* background-color: red; */ /* debug */
-}
+  .logo-img {
+    /* to avoid space under the logo image */
+    display: block;
+  }
 
-header ul {
-  list-style-type: none;
-}
+  header .center-col {
+    float: left;
+    width: 50%;
+    /* background-color: red; */ /* debug */
+  }
 
-header li {
-  display: inline-block;
-  /* centering the list items horizontally in the .center-col box (38px is the height of the tallest element in the first row of the header: the logo image) */
-  line-height: 38px;
-}
+  header ul {
+    list-style-type: none;
+  }
 
-header li a {
-  margin: 0 5px;
-  color: white;
-}
+  header li {
+    display: inline-block;
+    /* centering the list items horizontally in the .center-col box (38px is the height of the tallest element in the first row of the header: the logo image) */
+    line-height: 38px;
+  }
 
-header .right-col {
-  float: left;
-  width: 35%;
-  /* background-color: black; */ /* debug */
-}
+  header li a {
+    margin: 0 5px;
+  }
 
-header .right-col ul {
-  float: right;
-}
+  .center-col a:hover {
+    color: orange;
+  }
 
-#tutor-link {
-  opacity: 0.6;
-}
+  header .right-col {
+    float: left;
+    width: 35%;
+    /* background-color: black; */ /* debug */
+  }
 
-#login-link, #plan-link {
+  header .right-col ul {
+    float: right;
+  }
+
+  #tutor-link {
+    opacity: 0.6;
+  }
+
+  #login-link, #plan-link {
+      border-radius: 5px;
+  }
+
+  #login-link {
+    padding: 5px 25px;
+    border: 1px solid rgb(71, 131, 173);
+  }
+
+  #plan-link {
+    padding: 5px 10px;
+    border: 1px solid green;
+    background-color: green;
+  }
+  /* /header first row */
+
+  /* header second row */
+  #header-second-row {
+    width: 93%;
+    /* to place the image all the way to the right */
+    margin-left: 7%;
+    margin-top: 50px;
+  }
+
+  #header-second-row > #left-section {
+    float: left;
+    position: relative;
+    top: 80px;
+    padding-left: 10px;
+    width: 45%;
+    /* background-color: black; */ /* debug */
+  }
+
+  #header-second-row h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  #header-second-row a {
+    margin-top: 30px;
+    border: 1px solid green;
     border-radius: 5px;
-}
+    padding: 10px 30px;
+    /* to add a top margin (<a> is an inline element by default and borders can't be set for inline elements)*/
+    display: inline-block;
+    background-color: green;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
 
-#login-link {
-  padding: 5px 25px;
-  border: 1px solid rgb(71, 131, 173);
-}
-
-#plan-link {
-  padding: 5px 10px;
-  background-color: green;
-}
-/* /header first row */
+  #professionals-img {
+    float: left;
+    width: 55%;
+    height: 400px;
+    background-image: url("../img/professionals.png");
+    background-size: cover;
+  }
+  /* /header second row */
+/* /header */
